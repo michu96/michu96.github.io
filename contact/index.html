@@ -3,4 +3,17 @@ layout: default
 title: Contact
 ---
 
+<script>
+  async function clickHandle() {
+    try {
+      const result = await fetch("http://blogs-api-test.herokuapp.com/api")
+      const data = await result.json()
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+    }
+    
+  }
+</script>
 <h1>Contact</h1>
+<button onclick="clickHandle">Click</button>
